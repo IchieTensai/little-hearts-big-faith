@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Print-Pray-Play Method | Little Hearts, Big Faith</title>
+<meta name="description" content="A 56-page printable activity pack built around a 10-minute daily ritual that quietly raises Bible-loving kids in Christian homes across Nigeria. Print at home, use forever. ₦4,000.">
+<style>
+:root {
+  --navy: #1F3A5F;
+  --navy-deep: #1A3050;
+  --gold: #D4A24C;
+  --gold-deep: #B88532;
+  --gold-soft: rgba(212, 162, 76, 0.12);
+  --coral: #E07A5F;
+  --sage: #7FA084;
+  --cream: #FAF3E0;
+  --soft: #F4E5D6;
+  --paper: #FBF5E6;
+  --paper-warm: #F8EFD8;
+  --ink: #2B2B2B;
+  --ink-soft: #5A4E3F;
+  --line: #E5DBC5;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 17px;
+}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+h1, h2, h3 { line-height: 1.2; color: var(--navy); font-weight: 500; }
+h1 { font-size: 46px; margin-bottom: 18px; }
+h2 { font-size: 36px; margin-bottom: 14px; }
+h3 { font-size: 22px; }
+p { margin-bottom: 16px; }
+em { color: var(--gold-deep); font-style: italic; }
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 26px; }
+}
+
+/* ORNAMENTAL DIVIDER */
+.ornament {
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; margin: 0 auto 12px; max-width: 240px;
+}
+.ornament .line { flex: 1; height: 1px; background: var(--gold); opacity: 0.55; }
+.ornament .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+/* HERO */
+.hero {
+  background: var(--navy);
+  background-image:
+    radial-gradient(circle at 10% 0%, #294b78 0, transparent 40%),
+    radial-gradient(circle at 90% 100%, #294b78 0, transparent 40%);
+  color: var(--cream);
+  padding: 70px 0 80px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--gold);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 16px;
+  border: 1px solid rgba(212, 162, 76, 0.35); pointer-events: none;
+}
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 50px; align-items: center; position: relative; }
+.hero .kicker {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  font-weight: 500;
+  border: 1px solid var(--gold);
+  padding: 8px 18px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  color: var(--cream); font-size: 50px; line-height: 1.08;
+  margin-bottom: 22px; font-style: italic; font-weight: 400;
+}
+.hero h1 strong { font-style: normal; font-weight: 500; color: var(--gold); display: block; font-size: 64px; margin-top: 6px; letter-spacing: 1px; }
+.hero .promise {
+  font-size: 19px; color: rgba(250, 243, 224, 0.9);
+  margin-bottom: 30px; line-height: 1.55;
+  border-left: 2px solid var(--gold); padding-left: 18px;
+}
+.hero .price-box {
+  display: flex; gap: 18px; align-items: baseline; margin-bottom: 26px;
+  padding: 16px 20px; background: rgba(212, 162, 76, 0.1);
+  border: 1px solid rgba(212, 162, 76, 0.35);
+}
+.hero .price-strike { color: rgba(250, 243, 224, 0.5); text-decoration: line-through; font-size: 18px; }
+.hero .price-now { color: var(--gold); font-size: 30px; font-weight: 500; }
+.hero .price-tag { color: rgba(250, 243, 224, 0.65); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+.hero-img { position: relative; }
+.hero-img img.cover-main {
+  width: 100%; max-width: 460px; display: block; margin: 0 auto;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 12px 24px rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+.hero-img .float-page {
+  position: absolute; width: 180px;
+  box-shadow: 0 22px 44px rgba(0,0,0,0.4);
+  border-radius: 3px; border: 1px solid rgba(255,255,255,0.1);
+}
+.hero-img .float-page.fp1 { top: 30px; left: -30px; transform: rotate(-7deg); }
+.hero-img .float-page.fp2 { bottom: 20px; right: -20px; transform: rotate(6deg); }
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .hero h1 { font-size: 32px; }
+  .hero h1 strong { font-size: 42px; }
+  .hero .promise { border-left: none; border-top: 2px solid var(--gold); padding: 14px 0 0; }
+  .hero .price-box { justify-content: center; }
+  .hero-img .float-page { display: none; }
+}
+
+/* CTA BUTTON */
+.cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--gold); color: var(--navy-deep);
+  font-family: Georgia, serif; font-size: 19px; font-weight: 500;
+  padding: 18px 38px; border-radius: 4px; text-decoration: none;
+  cursor: pointer; transition: all 0.2s ease;
+  box-shadow: 0 6px 0 var(--gold-deep), 0 14px 28px rgba(212, 162, 76, 0.4);
+  letter-spacing: 0.3px;
+  border: 1px solid var(--gold-deep);
+}
+.cta:hover { transform: translateY(2px); box-shadow: 0 4px 0 var(--gold-deep), 0 10px 18px rgba(212, 162, 76, 0.5); }
+.cta:active { transform: translateY(6px); box-shadow: 0 0 0 var(--gold-deep), 0 4px 8px rgba(212, 162, 76, 0.3); }
+.cta-arrow { font-size: 20px; }
+.cta-block { text-align: center; padding: 30px 0; }
+.cta-note { display: block; margin-top: 16px; font-size: 14px; color: var(--ink-soft); font-style: italic; }
+
+/* TRUST BAR */
+.trust-bar {
+  background: var(--paper-warm); padding: 22px 0;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.trust-bar .row {
+  display: flex; justify-content: center; align-items: center; gap: 40px;
+  flex-wrap: wrap; font-size: 14px; color: var(--navy); font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.trust-bar .item { display: flex; align-items: center; gap: 8px; }
+.trust-bar .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+/* SECTIONS */
+section { padding: 80px 0; position: relative; }
+.section-paper { background: var(--paper); }
+.section-warm { background: var(--paper-warm); }
+.section-cream { background: var(--cream); }
+.section-navy {
+  background: var(--navy);
+  background-image:
+    radial-gradient(circle at 20% 0%, #294b78 0, transparent 50%),
+    radial-gradient(circle at 80% 100%, #294b78 0, transparent 50%);
+  color: var(--cream);
+  border-top: 4px solid var(--gold); border-bottom: 4px solid var(--gold);
+}
+.section-navy h2, .section-navy h3 { color: var(--cream); }
+
+.section-eyebrow {
+  display: block; font-size: 12px; letter-spacing: 5px;
+  color: var(--gold-deep); font-weight: 500; text-transform: uppercase;
+  margin-bottom: 14px; text-align: center;
+}
+.section-eyebrow.light { color: var(--gold); }
+.section-title { text-align: center; margin-bottom: 16px; font-style: italic; font-weight: 400; }
+.section-title strong { font-style: normal; font-weight: 500; }
+.section-lead { text-align: center; font-size: 19px; color: var(--ink-soft);
+                max-width: 700px; margin: 0 auto 50px; line-height: 1.6; }
+.section-navy .section-lead { color: rgba(250, 243, 224, 0.78); }
+
+@media (max-width: 720px) {
+  section { padding: 56px 0; }
+  .section-lead { font-size: 17px; margin-bottom: 36px; }
+}
+
+/* STORY SECTION */
+.story-card {
+  max-width: 760px; margin: 0 auto;
+  background: var(--paper); padding: 44px 50px;
+  border: 1px solid var(--line); border-top: 4px solid var(--gold);
+  position: relative;
+}
+.story-card::before {
+  content: '"'; position: absolute; top: -8px; left: 30px;
+  font-size: 100px; color: var(--gold); font-family: Georgia, serif; line-height: 1;
+}
+.story-card p { font-size: 18px; line-height: 1.65; color: var(--ink); }
+.story-card p.first { font-size: 21px; font-style: italic; color: var(--navy); margin-bottom: 18px; padding-left: 30px; }
+.story-card cite {
+  display: block; font-style: normal; color: var(--navy);
+  font-weight: 500; padding-top: 18px; border-top: 1px solid var(--line); margin-top: 24px;
+  text-align: right;
+}
+.story-card cite span { color: var(--ink-soft); font-weight: 400; font-size: 14px; }
+@media (max-width: 600px) {
+  .story-card { padding: 36px 24px; }
+  .story-card p.first { padding-left: 0; }
+}
+
+/* PRINT-PRAY-PLAY METHOD */
+.method-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  max-width: 1000px; margin: 0 auto;
+}
+.method-step {
+  text-align: center; padding: 36px 26px;
+  background: var(--paper); border: 1px solid var(--line);
+  position: relative;
+}
+.method-step::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 80px; height: 3px; background: var(--gold);
+}
+.method-step .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--gold); color: var(--navy-deep);
+  font-size: 26px; font-weight: 500; margin-bottom: 18px;
+  border: 3px solid var(--paper); box-shadow: 0 0 0 2px var(--gold);
+  font-family: Georgia, serif;
+}
+.method-step h3 { margin-bottom: 12px; font-size: 24px; }
+.method-step p { color: var(--ink-soft); font-size: 16px; margin: 0; }
+@media (max-width: 800px) { .method-grid { grid-template-columns: 1fr; } }
+
+/* PAGE SAMPLES GRID */
+.samples-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+  margin-top: 30px;
+}
+.sample {
+  background: var(--paper); overflow: hidden;
+  box-shadow: 0 12px 28px rgba(31, 58, 95, 0.1);
+  border: 1px solid var(--line); transition: transform 0.2s ease;
+}
+.sample:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(31, 58, 95, 0.15); }
+.sample img { width: 100%; display: block; }
+.sample .caption {
+  padding: 18px 20px;
+  background: var(--paper); border-top: 1px solid var(--line);
+}
+.sample .caption .label {
+  font-size: 11px; letter-spacing: 3px; color: var(--gold-deep);
+  text-transform: uppercase; font-weight: 500; display: block; margin-bottom: 6px;
+}
+.sample .caption h3 { font-size: 18px; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+.sample .caption p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.5; }
+@media (max-width: 900px) { .samples-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .samples-grid { grid-template-columns: 1fr; gap: 18px; } }
+
+/* OUTCOMES / IDENTITY */
+.outcomes-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  max-width: 880px; margin: 0 auto;
+}
+.outcome-card {
+  background: var(--paper); padding: 26px 28px;
+  border-left: 4px solid var(--gold); border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.outcome-card h3 { font-size: 19px; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+.outcome-card p { color: var(--ink-soft); font-size: 16px; margin: 0; line-height: 1.55; }
+@media (max-width: 700px) { .outcomes-grid { grid-template-columns: 1fr; } }
+
+/* OFFER STACK */
+.offer-box {
+  max-width: 760px; margin: 0 auto; background: var(--paper);
+  border: 2px solid var(--gold); overflow: hidden;
+  box-shadow: 0 24px 60px rgba(31, 58, 95, 0.18);
+}
+.offer-header {
+  background: var(--navy); color: var(--cream); padding: 28px 32px; text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+.offer-header .label { font-size: 12px; letter-spacing: 5px; color: var(--gold); display: block; margin-bottom: 8px; text-transform: uppercase; }
+.offer-header h3 { color: var(--cream); font-size: 24px; font-style: italic; font-weight: 400; }
+.offer-header h3 strong { font-style: normal; font-weight: 500; }
+.offer-section-title {
+  background: var(--paper-warm); color: var(--navy); padding: 14px 30px;
+  font-size: 12px; letter-spacing: 4px; text-transform: uppercase; font-weight: 500;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.offer-list { padding: 4px 30px; }
+.offer-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 0; border-bottom: 1px solid var(--line); gap: 18px;
+}
+.offer-item:last-child { border-bottom: none; }
+.offer-item .desc { flex: 1; }
+.offer-item .desc strong { display: block; color: var(--navy); margin-bottom: 4px; font-weight: 500; font-size: 17px; }
+.offer-item .desc small { color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+.offer-item .val { color: var(--gold-deep); font-weight: 500; white-space: nowrap; font-size: 17px; }
+.offer-bonus .desc strong::before { content: 'BONUS . '; color: var(--coral); font-size: 11px; letter-spacing: 3px; font-weight: 500; }
+.offer-total { background: var(--paper-warm); padding: 20px 30px; display: flex; justify-content: space-between; }
+.offer-total .label { font-size: 16px; color: var(--navy); font-weight: 500; }
+.offer-total .val { font-size: 22px; color: var(--navy); font-weight: 500; }
+.offer-now { background: var(--gold); padding: 28px 30px; text-align: center; }
+.offer-now .label { font-size: 12px; color: var(--navy-deep); letter-spacing: 5px; text-transform: uppercase; display: block; margin-bottom: 8px; font-weight: 500; }
+.offer-now .price { font-size: 56px; color: var(--navy-deep); font-weight: 500; line-height: 1; }
+.offer-now .price s { color: rgba(31,48,80,0.45); font-size: 30px; margin-right: 14px; font-weight: 400; }
+.offer-now .justify { font-size: 14px; color: var(--navy-deep); margin-top: 12px; font-style: italic; opacity: 0.85; }
+
+/* GUARANTEE */
+.guarantee {
+  max-width: 780px; margin: 50px auto 0; background: var(--paper);
+  border: 2px dashed var(--gold); padding: 32px;
+  display: grid; grid-template-columns: 110px 1fr; gap: 28px; align-items: center;
+}
+.guarantee-badge {
+  width: 110px; height: 110px; border-radius: 50%;
+  background: var(--gold); display: flex; align-items: center; justify-content: center;
+  flex-direction: column; color: var(--navy-deep); font-weight: 500;
+  border: 4px solid var(--paper); box-shadow: 0 0 0 3px var(--gold);
+  text-align: center; line-height: 1.1;
+}
+.guarantee-badge .big { font-size: 32px; font-weight: 500; }
+.guarantee-badge .small { font-size: 11px; letter-spacing: 1px; }
+.guarantee h3 { margin-bottom: 10px; font-size: 22px; font-style: italic; font-weight: 400; }
+.guarantee h3 strong { font-style: normal; font-weight: 500; }
+.guarantee p { color: var(--ink-soft); margin: 0; font-size: 16px; line-height: 1.6; }
+@media (max-width: 600px) {
+  .guarantee { grid-template-columns: 1fr; text-align: center; }
+  .guarantee-badge { margin: 0 auto; }
+}
+
+/* FAQ */
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: var(--paper); border: 1px solid var(--line);
+  margin-bottom: 14px; overflow: hidden;
+}
+.faq-item summary {
+  padding: 22px 26px; cursor: pointer; font-weight: 500;
+  color: var(--navy); font-size: 17px; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; font-size: 26px; color: var(--gold-deep); margin-left: 16px;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item .answer {
+  padding: 0 26px 24px; color: var(--ink-soft); font-size: 16px; line-height: 1.65;
+}
+
+/* URGENCY */
+.urgency {
+  max-width: 720px; margin: 50px auto 0;
+  background: linear-gradient(135deg, #5d2424 0%, #7a2e2e 100%);
+  color: #ffd9b9; padding: 30px 34px;
+  display: flex; align-items: center; gap: 24px;
+  border-top: 4px solid var(--gold);
+}
+.urgency-icon {
+  width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 217, 185, 0.15);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  font-size: 30px;
+}
+.urgency h3 { color: #ffd9b9; margin-bottom: 6px; font-size: 19px; font-weight: 500; }
+.urgency p { margin: 0; color: rgba(255, 217, 185, 0.88); font-size: 15px; line-height: 1.55; }
+@media (max-width: 600px) {
+  .urgency { flex-direction: column; text-align: center; }
+}
+
+/* WHY-IT-WORKS STATS */
+.stats-row {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+  max-width: 900px; margin: 0 auto;
+  background: rgba(212, 162, 76, 0.08); padding: 36px 30px;
+  border: 1px solid rgba(212, 162, 76, 0.3);
+}
+.stat { text-align: center; }
+.stat .num { font-size: 42px; color: var(--gold); font-weight: 500; line-height: 1; font-family: Georgia, serif; }
+.stat .label { font-size: 12px; color: var(--cream); letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; display: block; opacity: 0.85; }
+@media (max-width: 700px) { .stats-row { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+
+/* JUSTIFICATION */
+.justification {
+  max-width: 720px; margin: 30px auto 0;
+  background: var(--paper); padding: 26px 30px;
+  border-left: 3px solid var(--sage);
+  font-style: italic; color: var(--ink-soft); font-size: 16px; line-height: 1.6;
+  text-align: center;
+}
+.justification strong { color: var(--navy); font-style: normal; }
+
+/* FOOTER */
+footer {
+  background: var(--navy-deep); color: rgba(250, 243, 224, 0.7);
+  padding: 40px 0; text-align: center; font-size: 14px;
+  border-top: 4px solid var(--gold);
+}
+footer p { margin-bottom: 6px; }
+footer .verse { color: var(--gold); font-style: italic; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div class="wrap">
+<div>
+<span class="kicker">For Christian Parents in Nigeria</span>
+<h1>Introducing<strong>The Print-Pray-Play Method</strong></h1>
+<p class="promise">A 10-minute daily ritual quietly raising Bible-loving kids in Christian homes across Nigeria. No screens. No yelling. No new "should" on your already-tired plate. Just one printed page a day, used together.</p>
+<div class="price-box">
+<div>
+<div class="price-tag">Launch price</div>
+<div><span class="price-strike">₦7,500</span> <span class="price-now">₦4,000</span></div>
+</div>
+</div>
+<a href="#buy" class="cta">Get Instant Access <span class="cta-arrow">&#x2192;</span></a>
+<div style="margin-top:18px;font-size:14px;color:rgba(250,243,224,0.7);">Instant PDF download . Print as many times as you like . 30-day refund</div>
+</div>
+<div class="hero-img">
+<img class="cover-main" src="Little_Hearts_Big_Faith_Cover_Designed.png" alt="Little Hearts, Big Faith book cover">
+<img class="float-page fp1" src="samples/01_verse_cards.png" alt="Memory verse cards sample">
+<img class="float-page fp2" src="samples/14_certificate.png" alt="Certificate sample">
+</div>
+</div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+<div class="wrap">
+<div class="row">
+<div class="item"><span class="dot"></span> 56 pages of content</div>
+<div class="item"><span class="dot"></span> Ages 3 to 8</div>
+<div class="item"><span class="dot"></span> Instant PDF</div>
+<div class="item"><span class="dot"></span> Use for every child you raise</div>
+<div class="item"><span class="dot"></span> 30-day refund</div>
+</div>
+</div>
+</div>
+
+<!-- STORY (moved up - emotional anchor first) -->
+<section class="section-warm">
+<div class="wrap-narrow">
+<div class="ornament"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+<span class="section-eyebrow">A real moment from a Lagos home</span>
+<h2 class="section-title">"Mummy, can we do <strong>God time</strong> first?"</h2>
+
+<div class="story-card">
+<p class="first">Last Sunday after church, my friend Tolu sat down with her 5-year-old daughter and asked her what she remembered from children's church. Zara stared at her tablet. "Mummy, can I have my iPad?"</p>
+
+<p>That was the moment Tolu realised something quietly devastating. Her daughter could sing every Cocomelon song. Could mimic three YouTubers. Knew which buttons to press to skip ads on YouTube Kids. But couldn't remember a single Bible story from that morning.</p>
+
+<p>Sunday school had 45 minutes a week. The screen had 5 hours a day. The numbers were never going to work, no matter how loving the parent.</p>
+
+<p>So I built her something. A 56-page printable activity pack designed around a 10-minute daily rhythm called <strong>Print-Pray-Play</strong>. Two weeks in, she sent me a voice note. "Last night Zara asked me if we could do our God time before her bath instead of after, because she didn't want to be too sleepy for it." Two weeks. From iPad to God time.</p>
+
+<cite>The Tolu and Zara story<br><span>Lekki, Lagos . Two weeks after starting</span></cite>
+</div>
+</div>
+</section>
+
+<!-- THE METHOD -->
+<section class="section-paper">
+<div class="wrap">
+<div class="ornament"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+<span class="section-eyebrow">The new opportunity</span>
+<h2 class="section-title">A simple 10-minute rhythm. <strong>Three steps. That's it.</strong></h2>
+<p class="section-lead">Most Christian printables are stacks of worksheets you use once and forget. Little Hearts, Big Faith is built as a rotating system. 7 different page types inside, so your child gets something different every day for months without you planning a single thing.</p>
+
+<div class="method-grid">
+<div class="method-step">
+<div class="num">1</div>
+<h3>Print</h3>
+<p>Pull one page from the pack. Print on plain A4 at home or any business center near you.</p>
+</div>
+<div class="method-step">
+<div class="num">2</div>
+<h3>Pray</h3>
+<p>The pack tells you exactly what to pray with your child. No guesswork. No pressure to perform.</p>
+</div>
+<div class="method-step">
+<div class="num">3</div>
+<h3>Play</h3>
+<p>Color it. Trace it. Cut and stick it. Memorise it. The child does the work and loves it.</p>
+</div>
+</div>
+
+<div class="cta-block">
+<a href="#buy" class="cta">Start Tonight for ₦4,000 <span class="cta-arrow">&#x2192;</span></a>
+<span class="cta-note">PDF lands in your inbox in 60 seconds</span>
+</div>
+</div>
+</section>
+
+<!-- WHAT'S INSIDE - SAMPLES -->
+<section class="section-warm">
+<div class="wrap">
+<div class="ornament"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+<span class="section-eyebrow">Look inside the pack</span>
+<h2 class="section-title">17 different page types. <strong>56 pages of real content.</strong></h2>
+<p class="section-lead">These are actual pages from inside Little Hearts, Big Faith. What you see here is exactly what your child will be holding in their hands tonight.</p>
+
+<div class="samples-grid">
+
+<div class="sample">
+<img src="samples/01_verse_cards.png" alt="Memory verse cards">
+<div class="caption">
+<span class="label">Memory verse cards</span>
+<h3>40 verses to cut and carry</h3>
+<p>Cut along the gold borders. Color them. Tuck them in their pocket, lunchbox, or on the fridge.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/02_verse_tracing.png" alt="Verse tracing">
+<div class="caption">
+<span class="label">Verse tracing</span>
+<h3>Handwriting + scripture in one</h3>
+<p>Faded letters they trace, then write on their own. Two skills, one printable.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/03_bible_story.png" alt="Bible story">
+<div class="caption">
+<span class="label">Bible story pages</span>
+<h3>Mini-story plus prayer</h3>
+<p>Six classic stories. Each comes with a "Talk About It" question and a small prayer for bedtime.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/05_lords_prayer.png" alt="Lord's Prayer">
+<div class="caption">
+<span class="label">Keepsake prayer</span>
+<h3>The Lord's Prayer (frame-worthy)</h3>
+<p>Print on card stock and frame it. Put it above their bed. They see it every morning for years.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/07_fruit_of_spirit.png" alt="Fruit of the Spirit">
+<div class="caption">
+<span class="label">Fruit of the Spirit</span>
+<h3>9 fruits, kid-friendly</h3>
+<p>Love, joy, peace, patience, kindness. Each one with a definition a 5-year-old understands.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/08_fruit_tracker.png" alt="Fruit tracker">
+<div class="caption">
+<span class="label">Weekly fruit tracker</span>
+<h3>Watch character grow on paper</h3>
+<p>63 little circles to color when they show the fruit. End-of-week conversation ready-made.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/09_prayer_journal.png" alt="Prayer journal">
+<div class="caption">
+<span class="label">Prayer journal</span>
+<h3>5 templates for real quiet time</h3>
+<p>"Today I'm praying for..." "My thank-you list." "Prayers God answered." Even pre-readers can do it.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/10_affirmations.png" alt="I Am In Christ cards">
+<div class="caption">
+<span class="label">I Am In Christ cards</span>
+<h3>12 affirmations from scripture</h3>
+<p>"I am loved." "I am chosen." "I am wonderfully made." Stick on the fridge or lunchbox.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/11_word_search.png" alt="Bible word search">
+<div class="caption">
+<span class="label">Bible word searches</span>
+<h3>5 themed puzzles</h3>
+<p>Bible Heroes. Names of Jesus. Bible Places. Words of Praise. Vocabulary disguised as fun.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/13_reward_chart.png" alt="Reward chart">
+<div class="caption">
+<span class="label">Reward charts</span>
+<h3>3 streak charts running together</h3>
+<p>Bible reading. Memory verses. Acts of kindness. 30 days, 30 wins, character forming under the radar.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/14_certificate.png" alt="Certificate">
+<div class="caption">
+<span class="label">Certificates</span>
+<h3>Bible Hero . Memory Master</h3>
+<p>Print on card stock. Fill in the name. Frame it. Watch their chest puff out.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/15_devotion_starters.png" alt="Devotion conversation starters">
+<div class="caption">
+<span class="label">Family devotion starters</span>
+<h3>30 dinner-table prompts</h3>
+<p>"Tell me about a time you felt God close to you." Real questions that transform real homes.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/16_bible_alphabet.png" alt="Bible alphabet">
+<div class="caption">
+<span class="label">A-Z Bible alphabet</span>
+<h3>26 letters, 26 truths</h3>
+<p>A is for Abraham. B is for Bethlehem. By the end, they know 26 Bible truths by heart.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/17_reading_plan.png" alt="30-day reading plan">
+<div class="caption">
+<span class="label">30-day reading plan</span>
+<h3>Genesis to Revelation</h3>
+<p>One short passage a day. Tick the box. Done together at breakfast or bedtime.</p>
+</div>
+</div>
+
+<div class="sample">
+<img src="samples/04_books_old_testament.png" alt="Books of the Bible">
+<div class="caption">
+<span class="label">Books of the Bible</span>
+<h3>Old + New Testament charts</h3>
+<p>All 66 books. Color a circle each time they can name one without looking. Race a parent.</p>
+</div>
+</div>
+
+</div>
+
+<div class="cta-block" style="margin-top: 50px;">
+<a href="#buy" class="cta">Yes, Send Me The Whole Pack <span class="cta-arrow">&#x2192;</span></a>
+<span class="cta-note">₦4,000 . Lifetime access . Use for every child you'll ever raise</span>
+</div>
+</div>
+</section>
+
+<!-- WHY IT WORKS / OUTCOMES -->
+<section class="section-navy">
+<div class="wrap-narrow">
+<div class="ornament"><div class="line" style="background: rgba(212, 162, 76, 0.7);"></div><div class="dot"></div><div class="line" style="background: rgba(212, 162, 76, 0.7);"></div></div>
+<span class="section-eyebrow light">Why this works</span>
+<h2 class="section-title" style="color: var(--cream);">The window between ages 3 and 8 is small. <strong>And it's open right now.</strong></h2>
+<p class="section-lead">Children form their core view of God between roughly ages 3 and 8. That's when language is exploding, relational templates are setting, imagination is wide open. Whatever you build in this window will outlive you.</p>
+
+<div class="stats-row">
+<div class="stat"><div class="num">10</div><span class="label">Minutes a day</span></div>
+<div class="stat"><div class="num">30</div><span class="label">Hours over 6 months</span></div>
+<div class="stat"><div class="num">7</div><span class="label">Page types rotating</span></div>
+<div class="stat"><div class="num">∞</div><span class="label">Lifetime memories</span></div>
+</div>
+
+<p style="text-align:center; margin-top: 36px; font-size: 17px; color: rgba(250,243,224,0.85); line-height: 1.7;">Research from the Fuller Youth Institute on faith retention shows the single biggest predictor of whether a child keeps their faith into adulthood isn't church attendance. It's whether they had any consistent at-home spiritual ritual with their parents. Even a small one. Especially a small one.</p>
+<p style="text-align:center; font-size: 19px; color: var(--cream); margin-top: 20px;"><em style="color: var(--gold);">This pack hands you that ritual in a box.</em></p>
+</div>
+</section>
+
+<!-- OUTCOMES / WHAT YOUR CHILD BECOMES -->
+<section class="section-paper">
+<div class="wrap">
+<div class="ornament"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+<span class="section-eyebrow">What your child becomes</span>
+<h2 class="section-title">Six months from now, the child sitting at your dinner table <strong>is a different child.</strong></h2>
+<p class="section-lead">This is what consistent 10-minute rituals build. Not magic. Just compound interest on small, daily moments.</p>
+
+<div class="outcomes-grid">
+<div class="outcome-card">
+<h3>The child who quotes scripture before they can spell their own name</h3>
+<p>Memory verses pile up. After 8 weeks, they're reciting John 3:16 from the car seat without prompting.</p>
+</div>
+<div class="outcome-card">
+<h3>The child who pulls out their prayer journal first thing in the morning</h3>
+<p>Quiet time becomes their habit, not yours. They ask for it. They lead it. You just sit beside.</p>
+</div>
+<div class="outcome-card">
+<h3>The child who knows where the Bible verse is when their friend is sad</h3>
+<p>"Remember Psalm 23, mummy? My friend Joy was crying today and I told her about the shepherd."</p>
+</div>
+<div class="outcome-card">
+<h3>The child whose faith is built on something more than Sunday school</h3>
+<p>By age 9, they've spent more hours in scripture with you than any pastor will get with them in a year.</p>
+</div>
+<div class="outcome-card">
+<h3>The home that feels different on Tuesday nights</h3>
+<p>The 10 minutes becomes the still point in your week. Phones down. Both of you, together, in His Word.</p>
+</div>
+<div class="outcome-card">
+<h3>The parent who is no longer afraid of the screen</h3>
+<p>Because you're no longer outsourcing the spiritual work. You're doing it. Quietly. Daily. With joy.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OFFER STACK + BUY -->
+<section id="buy" class="section-warm">
+<div class="wrap">
+<div class="ornament"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+<span class="section-eyebrow">Get everything today</span>
+<h2 class="section-title">The full pack <strong>plus two free bonuses</strong></h2>
+<p class="section-lead">Buy once. Print as many times as you want. Use it for your first child, your second, your nephew, your Sunday school class. The license is yours.</p>
+
+<div class="offer-box">
+<div class="offer-header">
+<span class="label">Your Complete Bundle</span>
+<h3>Little Hearts, Big Faith <strong>Pack</strong></h3>
+</div>
+
+<div class="offer-section-title">The Core Pack</div>
+<div class="offer-list">
+<div class="offer-item">
+<div class="desc">
+<strong>The full 56-page printable</strong>
+<small>40 verse cards, 7 tracing pages, 6 Bible stories, 5 prayer journals, word searches, charts, and more</small>
+</div>
+<div class="val">₦12,000</div>
+</div>
+<div class="offer-item">
+<div class="desc">
+<strong>The 30-Day Family Bible Reading Plan (built in)</strong>
+<small>Genesis to Revelation in 30 short, daily readings</small>
+</div>
+<div class="val">₦3,000</div>
+</div>
+<div class="offer-item">
+<div class="desc">
+<strong>2 ready-to-personalize Certificates (built in)</strong>
+<small>Bible Hero and Memory Master, frame-ready on card stock</small>
+</div>
+<div class="val">₦2,000</div>
+</div>
+</div>
+
+<div class="offer-section-title">Free Bonuses (today only)</div>
+<div class="offer-list">
+<div class="offer-item offer-bonus">
+<div class="desc">
+<strong>Print-Pray-Play 7-Day Quickstart Guide</strong>
+<small>A simple plan for your first week so you don't have to think. Open page 1, follow the steps.</small>
+</div>
+<div class="val">₦2,500</div>
+</div>
+<div class="offer-item offer-bonus">
+<div class="desc">
+<strong>The Mum's & Dad's Quiet Time Companion (5 pages)</strong>
+<small>Parent reflection pages so your faith grows alongside your child's. You're being discipled too.</small>
+</div>
+<div class="val">₦3,500</div>
+</div>
+</div>
+
+<div class="offer-total">
+<div class="label">Total perceived value</div>
+<div class="val">₦23,000</div>
+</div>
+<div class="offer-now">
+<span class="label">Your Price Today</span>
+<div class="price"><s>₦7,500</s>₦4,000</div>
+<div class="justify">Less than a Sunday lunch out. Used for years.</div>
+</div>
+</div>
+
+<!-- JUSTIFICATION (so they can defend the purchase) -->
+<div class="justification">
+<strong>Quick math, in case your spouse asks.</strong> ₦4,000 ÷ 56 pages = ₦71 per page. Used across two children for 6 months = ₦11 per child per day. The cost of one Sunday school chocolate. The return is a child who knows God's word.
+</div>
+
+<div class="cta-block" style="margin-top: 30px;">
+<a href="#" class="cta" id="buy-button" style="font-size: 22px; padding: 22px 50px;">Get Instant Access for ₦4,000 <span class="cta-arrow">&#x2192;</span></a>
+<span class="cta-note">Pay with card, transfer, or USSD on Selar . PDF arrives in 60 seconds</span>
+</div>
+
+<!-- GUARANTEE -->
+<div class="guarantee">
+<div class="guarantee-badge">
+<div class="big">30</div>
+<div class="small">DAY MONEY<br>BACK</div>
+</div>
+<div>
+<h3>The <strong>Pray-Play-Pleased</strong> Guarantee</h3>
+<p>Try Print-Pray-Play with your child for 30 days. If your home doesn't feel a little more peaceful, if your child doesn't light up, send me one email and I'll refund every kobo. You keep the pack either way. The risk sits with me, not with you.</p>
+</div>
+</div>
+
+<!-- URGENCY -->
+<div class="urgency">
+<div class="urgency-icon">⏳</div>
+<div>
+<h3>Launch price ends after the first 50 buyers</h3>
+<p>The price moves from ₦4,000 to ₦7,500 permanently after we hit 50 sales. We're already counting. If this letter spoke to you, the smart move is now, while the door is still open.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section-paper">
+<div class="wrap">
+<div class="ornament"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+<span class="section-eyebrow">Common questions</span>
+<h2 class="section-title">Quick answers <strong>before you buy</strong></h2>
+
+<div class="faq-list">
+
+<details class="faq-item">
+<summary>How do I get the pack after I pay?</summary>
+<div class="answer">The PDF lands in your inbox within 60 seconds of payment. You also get a download link on the Selar success page. Save it to your phone, laptop, or both.</div>
+</details>
+
+<details class="faq-item">
+<summary>Can I print at home or do I need a special printer?</summary>
+<div class="answer">Any home printer works. Plain A4 paper. Black ink is fine, color is even better. If you don't have a printer, take the PDF on a flash drive or phone, then print at any business center near you for ₦50 to ₦100 per page.</div>
+</details>
+
+<details class="faq-item">
+<summary>How many of my kids can I use this with?</summary>
+<div class="answer">All of them. The license is for your whole household. Print 5 copies for 5 children. Print again next year. Print again when your nephew visits. There are no extra fees.</div>
+</details>
+
+<details class="faq-item">
+<summary>Is this for boys, girls, or both?</summary>
+<div class="answer">Both. Every page works for any child ages 3 to 8. Younger children will need help with reading. Older ones can do most of it on their own.</div>
+</details>
+
+<details class="faq-item">
+<summary>Is this denomination-specific?</summary>
+<div class="answer">No. The verses, stories, and prayers are drawn straight from the Bible. The pack works for any Christian family. Pentecostal, Anglican, Catholic, Baptist, Methodist, non-denominational, anywhere in between.</div>
+</details>
+
+<details class="faq-item">
+<summary>What if my child doesn't like it?</summary>
+<div class="answer">Send me one email within 30 days at the address on your receipt. I'll refund you. No long forms. No questions. You keep the pack.</div>
+</details>
+
+<details class="faq-item">
+<summary>Can I share this with my Sunday school class?</summary>
+<div class="answer">For your own family, print as many copies as you want. For Sunday school or homeschool co-ops outside your family, please reach out so we can work out a small group license.</div>
+</details>
+
+</div>
+
+<div class="cta-block" style="margin-top: 50px;">
+<a href="#buy" class="cta">I'm In. Send Me The Pack <span class="cta-arrow">&#x2192;</span></a>
+<span class="cta-note">₦4,000 . 60-second download . 30-day refund</span>
+</div>
+</div>
+</section>
+
+<!-- FINAL CALL -->
+<section class="section-navy" style="text-align: center; padding: 80px 0;">
+<div class="wrap-narrow">
+<div class="ornament"><div class="line" style="background: var(--gold);"></div><div class="dot"></div><div class="line" style="background: var(--gold);"></div></div>
+<h2 style="color: var(--cream); font-size: 34px; font-style: italic; font-weight: 400;">Tonight, your child can fall asleep <strong style="font-style: normal; font-weight: 500; color: var(--gold);">with a verse on their lips.</strong></h2>
+<p style="color: rgba(250,243,224,0.88); font-size: 19px; margin: 22px 0 36px;">Print one page. Sit beside them. Read it together. Say the prayer at the bottom. Lights out. That's the whole thing. Same time tomorrow. And the night after that. Six months later, you have a different child.</p>
+<a href="#buy" class="cta" style="font-size: 22px; padding: 22px 50px;">Yes, I Want This for ₦4,000 <span class="cta-arrow">&#x2192;</span></a>
+<p style="margin-top: 28px; color: var(--gold); font-style: italic; font-size: 17px;">"Train up a child in the way he should go." Proverbs 22:6</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<p>&copy; 2026 Little Hearts Press . Lagos, Nigeria</p>
+<p>Questions? Email us at hello@littleheartspress.com</p>
+<p class="verse">"Train up a child in the way he should go, and when he is old he will not depart from it."</p>
+</div>
+</footer>
+
+<script>
+// Replace with the actual Selar product URL when ready to publish
+const SELAR_URL = "#"; // e.g. "https://selar.co/your-product-slug"
+document.querySelectorAll('a[href="#buy"]').forEach(a => {
+  if (SELAR_URL && SELAR_URL !== "#") a.href = SELAR_URL;
+});
+const finalBtn = document.getElementById('buy-button');
+if (finalBtn && SELAR_URL && SELAR_URL !== "#") finalBtn.href = SELAR_URL;
+</script>
+
+</body>
+</html>
